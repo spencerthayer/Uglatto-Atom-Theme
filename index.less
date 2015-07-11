@@ -1,0 +1,257 @@
+@import 'syntax-variables';
+
+atom-text-editor, :host {
+  //background-color: @syntax-background-color;
+  //color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+
+    .cursor-line {
+      background-color: @syntax-gutter-background-color-selected;
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .gfm {
+    .markup {
+      &.heading {
+        color: @green;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: @yellow;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: @blue;
+    }
+
+    .variable.list {
+      color: @hotpink;
+      font-weight: bold;
+    }
+
+    .link {
+      color: @palewhite;
+
+      .entity {
+        color: @brightpurple;
+      }
+    }
+  }
+}
+
+.comment {
+  color: @darkpurple;
+}
+
+.string {
+  color: @yellow;
+}
+
+.constant.numeric {
+  color: @brightpurple;
+}
+
+.constant.language {
+  color: @brightpurple;
+}
+
+.constant.character,
+.constant.escape,
+.constant.other {
+  color: @brightpurple;
+}
+
+.keyword {
+  color: @hotpink;
+}
+
+.keyword.operator.bracket,
+.keyword.operator.punctuation,
+ {
+  color: @offwhite;
+}
+
+.storage {
+  color: @hotpink;
+}
+
+.storage.type {
+  font-style: italic;
+  color: @blue;
+}
+
+.entity.name.class {
+  text-decoration: none;
+  color: @green;
+}
+
+.entity.other.inherited-class {
+  font-style: italic;
+  text-decoration: none;
+  color: @green;
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
+.entity.name.function {
+  color: @green;
+}
+
+.entity.name.instance {
+  color: @blue;
+}
+
+.variable.parameter {
+  font-style: italic;
+  color: @orange;
+}
+
+.entity.name.tag {
+  color: @hotpink;
+}
+
+.entity.other.attribute-name {
+  color: @green;
+}
+
+.support.function {
+  color: @blue;
+}
+
+.support.function.decl {
+  color: @green;
+}
+
+.support.constant {
+  color: @blue;
+}
+
+.support.type,
+.support.class {
+  font-style: italic;
+  color: @blue;
+}
+
+.invalid {
+  color: @offwhite;
+  background-color: @hotpink;
+}
+
+.invalid.deprecated {
+  color: @offwhite;
+  background-color: @brightpurple;
+}
+
+// Jade syntax
+.class.jade {
+  color: @brightpurple;
+}
+
+// 'this' Javascript
+.variable.language.js {
+  color: @hotpink;
+}
+atom-text-editor, /* 1 */
+:host {
+  //color: @syntax-text-color;
+  //background-color: @syntax-background-color;
+}
+
+atom-text-editor::shadow :host {
+  background-color: @hotpink;
+  color: @syntax-text-color;
+}
+atom-text-editor::shadow {
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+atom-text-editor::shadow .cursor {
+  border-color: @truewhite;
+  background-color: rgba(125, 0, 255, 0.5);
+  background-blend-mode: lighten;
+  z-index: 100;
+}
+atom-text-editor::shadow .cursor-line {
+    background-color: rgba(0,0,0,.5);
+}
+atom-text-editor .selection .region {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+atom-text-editor .is-focused .selection .region {
+  background-color: @yellow;
+}
+
+/** CUSTOM CSS FOR PACKAGES **/
+atom-text-editor, atom-text-editor::shadow {
+  // Box
+  .highlights .highlight-selected .region {
+    border-color: @lightgrey;
+  }
+  // Background
+  .highlights .highlight-selected.background .region {
+    background-color: @dimgrey;
+  }
+  // Light theme box (set in settings)
+  .highlights .highlight-selected.light-theme .region {
+    border-color: @yellow;
+  }
+  // Light theme background (set in settings)
+  .highlights .highlight-selected.light-theme.background .region {
+    background-color: @green;
+  }
+}

@@ -1,0 +1,42 @@
+// Colors
+@truewhite: rgb(255,255,255);
+@offwhite: rgb(250, 250, 250);
+@palewhite: rgb(200, 200, 200);
+@lightgrey: rgb(125, 125, 125);
+@dimgrey: rgb(60,60,60);
+@darkgrey: rgb(40,40,45);
+@blue: rgb(100, 215, 250);
+@orange: rgb(250, 150, 25);
+@green: rgb(150, 200, 0);
+@yellow: rgb(225, 225, 115);
+@hotpink: rgb(250, 25, 115);
+@red: rgb(225, 0, 50);
+@darkpurple: rgb(50, 50, 75);
+@brightpurple: rgb(175, 125, 255);
+
+// General colors
+@syntax-text-color: @offwhite;
+@syntax-cursor-color: @truewhite;
+@syntax-selection-color: @dimgrey;
+@syntax-background-color: @darkgrey;
+
+// Guide colors
+@syntax-wrap-guide-color: rgba(255, 255, 255, .1);
+@syntax-indent-guide-color: rgba(255, 255, 255, .15);
+@syntax-invisible-character-color: rgba(150, 150, 150, .2);
+
+// For find and replace markers
+@syntax-result-marker-color: @lightgrey;
+@syntax-result-marker-color-selected: @truewhite;
+
+// Gutter colors
+@syntax-gutter-text-color: @syntax-text-color;
+@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+@syntax-gutter-background-color: lighten(@syntax-background-color, 3%);
+@syntax-gutter-background-color-selected: @syntax-selection-color;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @orange;
+@syntax-color-added: @green;
+@syntax-color-modified: @yellow;
+@syntax-color-removed: @hotpink;

@@ -1,0 +1,32 @@
+{
+  "name": "Uglatto",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Monokai'ish theme.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spencerthayer/uglatto"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.39.0"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/spencerthayer/uglatto/issues"
+  },
+  "homepage": "https://github.com/spencerthayer/uglatto",
+  "_id": "uglatto@0.0.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
